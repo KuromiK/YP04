@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using Microsoft.EntityFrameworkCore;
 
 namespace YP04
@@ -36,12 +37,44 @@ namespace YP04
         {
             Abiturient? abiturient = ablist.SelectedItem as Abiturient;
             if (abiturient is null) return;
-          //  AbiturientWindow abiturientWindow = new AbiturientWindow();
+            AbiturientWindow abiturientWindow = new AbiturientWindow(new Abiturient
+            {
+                Id = abiturient.Id,
+                FirstName = abiturient.FirstName,
+                SecondName = abiturient.SecondName,
+                Patronymic = abiturient.Patronymic,
+                Speciality = abiturient.Speciality
+            });
+            if (abiturientWindow.ShowDialog() == true)
+            {
+                abiturient = db.Abiturients.Find(abiturientWindow.Abiturient.Id);
+            }
         }
         private void Edit_click(object sender, RoutedEventArgs e) 
         {
             Abiturient? abiturient = ablist.SelectedItem as Abiturient;
             if (abiturient is null) return;
+            AbiturientWindow AbiturientWindow = new AbiturientWindow (new Abiturient
+            {
+                Id = abiturient.Id,
+                FirstName = abiturient.FirstName,
+                SecondName = abiturient.SecondName,
+                Patronymic = abiturient.Patronymic,
+                Speciality = abiturient.Speciality
+            });
+            if (AbiturientWindow.ShowDialog() == true)
+            {
+                abiturient = db.Abiturients.Find(AbiturientWindow.Abiturient.Id);
+                if (abiturient != null)
+                {
+                    abiturient.FirstName = AbiturientWindow.Abiturient.FirstName;
+                    abiturient.SecondName = AbiturientWindow.Abiturient.SecondName;
+                    abiturient.Speciality = AbiturientWindow.Abiturient.Speciality;
+                    abiturient.Patronymic = AbiturientWindow.Abiturient.Patronymic;
+                    db.SaveChanges();
+                    ablist.Items.Refresh();
+                }
+            }
         }
         private void Delete_click(object sender, RoutedEventArgs e)
         {

@@ -15,10 +15,11 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding FirstName}" FontSize="16"/>
-                        <TextBlock Text="{Binding SecondName}" FontSize="16"/>
-                        <TextBlock Text="{Binding Patronymic}" FontSize="16"/>
-                        <TextBlock Text="{Binding Speciality}" FontSize="16"/>
+                        <TextBlock Text="{Binding FirstName}"/>
+                        <TextBlock Text="{Binding SecondName}"/>
+                        <TextBlock Text="{Binding Patronymic}"/>
+                        <TextBlock Text="{Binding Speciality}"/>
+                        <TextBlock Text="{Binding Gender}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

@@ -15,22 +15,22 @@ namespace YP04
         public string? FirstName { get; set; }
         public string? SecondName { get; set; }
         public string? Patronymic { get; set; }
-       // public char? Gender { get; set; }
-        public DateOnly? DateBirthday { get; set; }
-        public int? Age { get; set; }
-        public string? Nationality { get; set; }
-        public string? PlaceLive { get; set; }
-        public string? FinishSchool { get; set; }
-        public double? AttestatRating { get; set; }
-        public int? Snils { get; set; }
+        public char? Gender { get; set; }
+     //   public DateOnly? DateBirthday { get; set; }
+      //  public int? Age { get; set; }
+      //  public string? Nationality { get; set; }
+      //  public string? PlaceLive { get; set; }
+      //  public string? FinishSchool { get; set; }
+       // public double? AttestatRating { get; set; }
+       // public int? Snils { get; set; }
         //public byte[] InvalidScan;
         //  [Column(TypeName = "BLOB")]
         //public byte[] OrphanScan { get; set; }
         public string? Speciality { get; set; }
         //public byte[] AttestatScan { get; set; }
-        public string? Budget { get; set; }
-        public string? Enrollment { get; set; }
-        public DateOnly? YearEntry { get; set; }
+       // public string? Budget { get; set; }
+       // public string? Enrollment { get; set; }
+        //public DateOnly? YearEntry { get; set; }
 
 
     }
