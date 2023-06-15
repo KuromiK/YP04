@@ -51,23 +51,37 @@
         <TextBlock Text="Форма обучения:" Grid.Row="15"/>
         <TextBlock Text="Зачислен:" Grid.Row="16"/>
         <TextBlock Text="Год поступления:" Grid.Row="17"/>
+        <TextBlock x:Name="age_label" Text = "" Grid.Row="5" Grid.Column="1"/>
 
         <TextBox x:Name="name" Text="{Binding FirstName}" Grid.Column="1"/>
         <TextBox x:Name="family" Text="{Binding SecondName}" Grid.Column="1" Grid.Row="1"/>
         <TextBox x:Name="patron" Text="{Binding Patronymic}" Grid.Column="1" Grid.Row="2"/>
         <TextBox x:Name="spec" Text="{Binding Speciality}" Grid.Column="1" Grid.Row="13"/>
-        <StackPanel x:Name="stackPanel" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <RadioButton GroupName="pol" Content="Ж     " x:Name="gender1"/>
-            <RadioButton GroupName="pol" Content="М" x:Name="gender2"/>
+        <TextBox x:Name="attestat" Text="{Binding AttestatRating}" Grid.Column="1" Grid.Row="9"/>
+        <TextBox x:Name="snils" Text="{Binding Snils}" Grid.Column="1" Grid.Row="10"/>
+        <StackPanel x:Name="stackPanel" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="0 3 0 0" Orientation="Horizontal">
+            <RadioButton GroupName="pol" Content="Женский     " x:Name="gender1" Click="RadioButton_Checked1"/>
+            <RadioButton GroupName="pol" Content="Мужской" x:Name="gender2" Click="RadioButton_Checked1"/>
         </StackPanel>
-      <!--  <TextBox Text="{Binding DateBirthday}" Grid.Column="1" Grid.Row="4"/>
-        <TextBox Text="{Binding PlaceLive}" Grid.Column="1" Grid.Row="7"/>
-        <TextBox Text="{Binding AttestatRating}" Grid.Column="1" Grid.Row="9"/>
-        <TextBox Text="{Binding Snils}" Grid.Column="1" Grid.Row="10"/> -->
-       
+        <StackPanel x:Name="stackPanel1" Grid.Column="1" Grid.Row="16" Grid.ColumnSpan="2" Margin="0 3 0 0" Orientation="Horizontal">
+            <RadioButton GroupName="enro" Content="Зачислен     " x:Name="Enrollment1" Click="RadioButton_Checked"/>
+            <RadioButton GroupName="enro" Content="Не зачислен" x:Name="Enrollment2" Checked="RadioButton_Checked"/>
+        </StackPanel>
+
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="18"  Grid.ColumnSpan="3">
             <Button IsDefault="True" Click="Accept_click" Margin="0 0 30 10" Width="60">ОК</Button>
             <Button IsCancel="True" Width="60" Margin="0 0 0 10">Отмена</Button>
         </StackPanel>
+
+        <DatePicker x:Name="arrivalCalendarDatePicker" Grid.Column="1" Grid.Row="4" CalendarClosed="arrivalCalendarDatePicker_CalendarClosed"/>
+        
+        <ComboBox x:Name="speciality_list" Grid.Column="1" Grid.Row="13" SelectionChanged="especiality_SelectionChanged">
+            <TextBlock>Архитектура</TextBlock>
+            <TextBlock>Гидрогеология и инженерная геология</TextBlock>
+            <TextBlock>Информационные сиситемы и программирование</TextBlock>
+            <TextBlock>Структура и эксплуатация зданий и сооружений</TextBlock>
+            <TextBlock>Разработка электронных устройств и систем</TextBlock>
+            <TextBlock>Экономика и бухгалтерский учет</TextBlock>
+        </ComboBox>
     </Grid>
 </Window>

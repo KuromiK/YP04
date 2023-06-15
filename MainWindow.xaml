@@ -20,6 +20,9 @@
                         <TextBlock Text="{Binding Patronymic}"/>
                         <TextBlock Text="{Binding Speciality}"/>
                         <TextBlock Text="{Binding Gender}"/>
+                        <TextBlock Text="{Binding Enrollment}"/>
+                        <TextBlock Text="{Binding DateBirthday}"/>
+                        <TextBlock Text="{Binding Age}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -28,7 +31,7 @@
             <Button Content="Добавить" Width="80" Margin="10" Click="Add_click"/>
             <Button Content="Изменить" Width="80" Margin="0 10" Click="Edit_click"/>
             <Button Content="Удалить" Width="80" Margin="10" Click="Delete_click"/>
-            <Button Content="Просмотреть" Width="80" Margin="10" Click="Look_click"/>
+            <Button Content="Просмотреть" Width="80" Margin="0 10" Click="Look_click"/>
         </StackPanel>
     </Grid>
 </Window>

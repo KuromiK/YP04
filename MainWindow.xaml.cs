@@ -43,7 +43,10 @@ namespace YP04
                 FirstName = abiturient.FirstName,
                 SecondName = abiturient.SecondName,
                 Patronymic = abiturient.Patronymic,
-                Speciality = abiturient.Speciality
+                Speciality = abiturient.Speciality,
+                Gender = abiturient.Gender,
+                DateBirthday = abiturient.DateBirthday,
+                Enrollment = abiturient.Enrollment
             });
             if (abiturientWindow.ShowDialog() == true)
             {
@@ -60,7 +63,10 @@ namespace YP04
                 FirstName = abiturient.FirstName,
                 SecondName = abiturient.SecondName,
                 Patronymic = abiturient.Patronymic,
-                Speciality = abiturient.Speciality
+                Speciality = abiturient.Speciality,
+                Gender = abiturient.Gender,
+                Enrollment = abiturient.Enrollment,
+                DateBirthday = abiturient.DateBirthday
             });
             if (AbiturientWindow.ShowDialog() == true)
             {
@@ -71,6 +77,9 @@ namespace YP04
                     abiturient.SecondName = AbiturientWindow.Abiturient.SecondName;
                     abiturient.Speciality = AbiturientWindow.Abiturient.Speciality;
                     abiturient.Patronymic = AbiturientWindow.Abiturient.Patronymic;
+                    abiturient.Gender = AbiturientWindow.Abiturient.Gender;
+                    abiturient.DateBirthday = AbiturientWindow.Abiturient.DateBirthday;
+                    abiturient.Enrollment = AbiturientWindow.Abiturient.Enrollment;
                     db.SaveChanges();
                     ablist.Items.Refresh();
                 }

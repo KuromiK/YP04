@@ -26,6 +26,50 @@ namespace YP04
         void Accept_click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
+
+        }
+
+        private void RadioButton_Checked1(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            if (pressed.Content.Equals("Женский"))
+            {
+                Abiturient.Gender = "Ж";
+            }
+            else
+            {
+                Abiturient.Gender = "М";
+            }
+        }
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            if (pressed.Content.Equals("Зачислен"))
+            {
+                Abiturient.Enrollment = "Зачислен";
+            }
+            else
+            {
+                Abiturient.Enrollment = "Не зачислен";
+            }
+        }
+
+        private void especiality_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TextBlock text = (TextBlock)speciality_list.SelectedItem;
+            Abiturient.Speciality = text.Text;
+        }
+
+        private void arrivalCalendarDatePicker_CalendarClosed(object sender, RoutedEventArgs e)
+        {
+            DateTime date = arrivalCalendarDatePicker.SelectedDate.Value;
+            Abiturient.DateBirthday = date;
+            DateTime age = DateTime.Now;
+            int tmp = age.Year - date.Year;
+            if (date > age.AddYears(0 - tmp))
+                tmp--;
+            age_label.Text = tmp.ToString();
+            Abiturient.Age = tmp;
         }
     }
 }
