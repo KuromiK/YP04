@@ -1,0 +1,70 @@
+﻿<Window x:Class="YP04.LookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YP04"
+        mc:Ignorable="d"
+        Title="Look" Height="700" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Фамилия:"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Имя:" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Отчество:" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Пол:" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Дата рождения:" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Возвраст:" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Гражданство:" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Место проживания:" Grid.Row="7"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Образование:" Grid.Row="8"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Средний балл аттестата:" Grid.Row="9"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="СНИЛС:" Grid.Row="10"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Справка об инвалидности:" Grid.Row="11"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Справка о сиротстве(опекунстве):" Grid.Row="12"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Специальность:" Grid.Row="13"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Скан аттестата:" Grid.Row="14"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Форма обучения:" Grid.Row="15"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Зачислен:" Grid.Row="16"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" Text="Год поступления:" Grid.Row="17"/>
+        <TextBlock HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontSize="18" x:Name="age_label" Text = "" Grid.Row="5" Grid.Column="1"/>
+        <TextBlock Text="{Binding SecondName}" FontWeight="Bold" FontSize="20" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding FirstName}" FontWeight="Bold" FontSize="20" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Patronymic}" FontWeight="Bold" FontSize="20" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Gender}" Grid.Column="1" FontSize="20" Grid.Row="3" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding DateBirthday}" Grid.Column="1" FontSize="20" Grid.Row="4" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Age}" Grid.Column="1" Grid.Row="5" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Nationality}" Grid.Column="1" Grid.Row="6" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding PlaceLive}" Grid.Column="1" Grid.Row="7" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Budget}" Grid.Column="1" Grid.Row="15" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding AttestatRating}" Grid.Column="1" Grid.Row="9" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Snils}" Grid.Column="1" Grid.Row="10" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Enrollment}" Grid.Column="1" Grid.Row="16" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Speciality}" Grid.Column="1" Grid.Row="13" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding YearEntry}" Grid.Column="1" Grid.Row="17" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding FinishSchool}" Grid.Column="1" Grid.Row="8" FontSize="20" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

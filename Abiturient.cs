@@ -16,21 +16,23 @@ namespace YP04
         public string? SecondName { get; set; }
         public string? Patronymic { get; set; }
         public string? Gender { get; set; }
-        public DateTime? DateBirthday { get; set; }
-        public int? Age { get; set; }
-      //  public string? Nationality { get; set; }
-      //  public string? PlaceLive { get; set; }
-      //  public string? FinishSchool { get; set; }
-       // public double? AttestatRating { get; set; }
-       // public int? Snils { get; set; }
+        public string? DateBirthday { get; set; }
+        public string? Age { get; set; }
+        public string? Nationality { get; set; }
+        public string? PlaceLive { get; set; }
+        public string? FinishSchool { get; set; }
+        public double? AttestatRating { get; set; }
+        public int? Snils { get; set; }
+        /// <summary>
         //public byte[] InvalidScan;
+        /// </summary>
         //  [Column(TypeName = "BLOB")]
-        //public byte[] OrphanScan { get; set; }
+       // public byte[] OrphanScan { get; set; }
         public string? Speciality { get; set; }
-        //public byte[] AttestatScan { get; set; }
-       // public string? Budget { get; set; }
+       // public byte[] AttestatScan { get; set; }
+        public string? Budget { get; set; }
         public string? Enrollment { get; set; }
-        //public DateOnly? YearEntry { get; set; }
+        public int? YearEntry { get; set; }
 
 
     }

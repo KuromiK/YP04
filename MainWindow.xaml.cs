@@ -37,7 +37,7 @@ namespace YP04
         {
             Abiturient? abiturient = ablist.SelectedItem as Abiturient;
             if (abiturient is null) return;
-            AbiturientWindow abiturientWindow = new AbiturientWindow(new Abiturient
+            LookWindow lookWindow = new LookWindow(new Abiturient
             {
                 Id = abiturient.Id,
                 FirstName = abiturient.FirstName,
@@ -46,11 +46,18 @@ namespace YP04
                 Speciality = abiturient.Speciality,
                 Gender = abiturient.Gender,
                 DateBirthday = abiturient.DateBirthday,
-                Enrollment = abiturient.Enrollment
+                Enrollment = abiturient.Enrollment,
+                Nationality = abiturient.Nationality,
+                PlaceLive = abiturient.PlaceLive,
+                FinishSchool = abiturient.FinishSchool,
+                AttestatRating = abiturient.AttestatRating,
+                Snils = abiturient.Snils,
+                Budget = abiturient.Budget,
+                YearEntry = abiturient.YearEntry
             });
-            if (abiturientWindow.ShowDialog() == true)
+            if (lookWindow.ShowDialog() == true)
             {
-                abiturient = db.Abiturients.Find(abiturientWindow.Abiturient.Id);
+                abiturient = db.Abiturients.Find(lookWindow.Abiturient.Id);
             }
         }
         private void Edit_click(object sender, RoutedEventArgs e) 
@@ -66,7 +73,14 @@ namespace YP04
                 Speciality = abiturient.Speciality,
                 Gender = abiturient.Gender,
                 Enrollment = abiturient.Enrollment,
-                DateBirthday = abiturient.DateBirthday
+                DateBirthday = abiturient.DateBirthday,
+                Nationality = abiturient.Nationality,
+                PlaceLive = abiturient.PlaceLive,
+                FinishSchool = abiturient.FinishSchool,
+                AttestatRating = abiturient.AttestatRating,
+                Snils = abiturient.Snils,
+                Budget = abiturient.Budget,
+                YearEntry = abiturient.YearEntry
             });
             if (AbiturientWindow.ShowDialog() == true)
             {
@@ -80,6 +94,13 @@ namespace YP04
                     abiturient.Gender = AbiturientWindow.Abiturient.Gender;
                     abiturient.DateBirthday = AbiturientWindow.Abiturient.DateBirthday;
                     abiturient.Enrollment = AbiturientWindow.Abiturient.Enrollment;
+                    abiturient.Nationality = AbiturientWindow.Abiturient.Nationality;
+                    abiturient.PlaceLive = AbiturientWindow.Abiturient.PlaceLive;
+                    abiturient.FinishSchool = AbiturientWindow.Abiturient.FinishSchool;
+                    abiturient.AttestatRating = AbiturientWindow.Abiturient.AttestatRating;
+                    abiturient.Snils = AbiturientWindow.Abiturient.Snils;
+                    abiturient.Budget = AbiturientWindow.Abiturient.Budget;
+                    abiturient.YearEntry = AbiturientWindow.Abiturient.YearEntry;
                     db.SaveChanges();
                     ablist.Items.Refresh();
                 }

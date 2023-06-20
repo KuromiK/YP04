@@ -5,33 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YP04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="MainWindow_Loaded">
+        Title="MainWindow" Height="700" Width="1000" Loaded="MainWindow_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <ListBox x:Name="ablist" ItemsSource="{Binding}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding FirstName}"/>
-                        <TextBlock Text="{Binding SecondName}"/>
-                        <TextBlock Text="{Binding Patronymic}"/>
-                        <TextBlock Text="{Binding Speciality}"/>
-                        <TextBlock Text="{Binding Gender}"/>
-                        <TextBlock Text="{Binding Enrollment}"/>
-                        <TextBlock Text="{Binding DateBirthday}"/>
-                        <TextBlock Text="{Binding Age}"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="8">
+
+                        <TextBlock Text="{Binding SecondName}" x:Name="name_spis" FontSize="20" VerticalAlignment="Center"/>
+                        <TextBlock Text="  "/>
+                        <TextBlock Text="{Binding FirstName}" FontSize="20" x:Name="family_spis" VerticalAlignment="Center"/>
+                        <TextBlock Text="  "/>
+                        <TextBlock Text="{Binding Patronymic}" FontSize="20" x:Name="patron_spis" VerticalAlignment="Center"/>
+                        <TextBlock Text="   "/>
+                        <TextBlock Text="{Binding Speciality}" FontSize="20" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="   "/>
+                        <TextBlock Text="{Binding Enrollment}" FontSize="20" FontWeight="Bold" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="   "/>
+                        <TextBlock Text="{Binding YearEntry}" VerticalAlignment="Bottom" FontWeight="Bold"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Добавить" Width="80" Margin="10" Click="Add_click"/>
-            <Button Content="Изменить" Width="80" Margin="0 10" Click="Edit_click"/>
-            <Button Content="Удалить" Width="80" Margin="10" Click="Delete_click"/>
-            <Button Content="Просмотреть" Width="80" Margin="0 10" Click="Look_click"/>
+            <Button Content="Добавить" Height="50" Width="80" Margin="10" Click="Add_click"/>
+            <Button Content="Изменить" Height="50" Width="80" Margin="0 10" Click="Edit_click"/>
+            <Button Content="Удалить" Height="50" Width="80" Margin="10" Click="Delete_click"/>
+            <Button Content="Просмотреть" Height="50" Width="80" Margin="0 10" Click="Look_click"/>
         </StackPanel>
     </Grid>
 </Window>
