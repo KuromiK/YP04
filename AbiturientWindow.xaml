@@ -53,9 +53,9 @@
         <TextBlock Text="Год поступления:" Grid.Row="17"/>
         <TextBlock x:Name="age_label" Text = "" Grid.Row="5" Grid.Column="1"/>
 
-        <Button x:Name="scan_invalid" Grid.Column="2" IsEnabled="False" Grid.Row="11" Margin="50 1 50 1">Загрузить скан</Button>
-        <Button x:Name="scan_orphan" Grid.Column="2" IsEnabled="False" Grid.Row="12" Margin="50 1 50 1">Загрузить скан</Button>
-        <Button x:Name="scan_attestat" Grid.Column="2" IsEnabled="False" Grid.Row="14" Margin="50 1 50 1">Загрузить скан</Button>
+        <Button x:Name="scan_invalid" Grid.Column="2" IsEnabled="False" Grid.Row="11" Margin="50 1 50 1" Click="scan_invalid_Click">Загрузить скан</Button>
+        <Button x:Name="scan_orphan" Grid.Column="2" IsEnabled="False" Grid.Row="12" Margin="50 1 50 1" Click="scan_orphan_Click">Загрузить скан</Button>
+        <Button x:Name="scan_attestat" Grid.Column="1"  Grid.Row="14" Margin="50 1 50 1" Click="scan_attestat_Click">Загрузить скан</Button>
 
         <TextBox x:Name="name" Text="{Binding FirstName}" Grid.Column="1"/>
         <TextBox x:Name="family" Text="{Binding SecondName}" Grid.Column="1" Grid.Row="1"/>
@@ -66,12 +66,12 @@
         <TextBlock Text="" x:Name="text_kostroma" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Center"/>
 
         <StackPanel x:Name="stackPanel4" Grid.Column="1" Grid.Row="11" VerticalAlignment="Center" Margin="0 3 0 0" Orientation="Horizontal">
-            <RadioButton GroupName="spravka1" Content="Нет     " VerticalAlignment="Center" x:Name="spravka_invalid1" Click="RadioButtonOrphan_Checked"/>
-            <RadioButton GroupName="spravka1" Content="Есть:" VerticalAlignment="Center" x:Name="spravka_invalid2" Click="RadioButtonOrphan_Checked"/>
+            <RadioButton GroupName="spravka1" Content="Нет     " VerticalAlignment="Center" x:Name="spravka_invalid1" Click="RadioButtonInvalid_Checked"/>
+            <RadioButton GroupName="spravka1" Content="Есть:" VerticalAlignment="Center" x:Name="spravka_invalid2" Click="RadioButtonInvalid_Checked"/>
         </StackPanel>
         <StackPanel x:Name="stackPanel5" Grid.Column="1" Grid.Row="12" VerticalAlignment="Center" Margin="0 3 0 0" Orientation="Horizontal">
-            <RadioButton GroupName="spravka2" Content="Нет     "  VerticalAlignment="Center" x:Name="spravka_orphan1" Click="RadioButtonInvalid_Checked"/>
-            <RadioButton GroupName="spravka2" Content="Есть:" VerticalAlignment="Center" x:Name="spravka_orphan2" Click="RadioButtonInvalid_Checked"/>
+            <RadioButton GroupName="spravka2" Content="Нет     "  VerticalAlignment="Center" x:Name="spravka_orphan1" Click="RadioButtonOrphan_Checked"/>
+            <RadioButton GroupName="spravka2" Content="Есть:" VerticalAlignment="Center" x:Name="spravka_orphan2" Click="RadioButtonOrphan_Checked"/>
         </StackPanel>
 
         <StackPanel x:Name="stackPanel" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="0 3 0 0" Orientation="Horizontal">
@@ -123,6 +123,31 @@
             <TextBlock>Вохомский район</TextBlock>
             <TextBlock>Галичский район</TextBlock>
             <TextBlock>Кадыйский район</TextBlock>
+            <TextBlock>Кологривский район</TextBlock>
+            <TextBlock>Костромской район</TextBlock>
+            <TextBlock>Красносельский район</TextBlock>
+            <TextBlock>Макарьевский район</TextBlock>
+            <TextBlock>Межевской район</TextBlock>
+            <TextBlock>Нейский район</TextBlock>
+            <TextBlock>Муниципальный район город Нерехта и Нерехтский район</TextBlock>
+            <TextBlock>Октябрьский район</TextBlock>
+            <TextBlock>Островский район</TextBlock>
+            <TextBlock>Павинский район</TextBlock>
+            <TextBlock>Парфеньевский район</TextBlock>
+            <TextBlock>Поназыревкий район</TextBlock>
+            <TextBlock>Пыщугский район</TextBlock>
+            <TextBlock>Солигаличский район</TextBlock>
+            <TextBlock>Судиславский район</TextBlock>
+            <TextBlock>Сусанинский район</TextBlock>
+            <TextBlock>Чухломской район</TextBlock>
+            <TextBlock>Шарьинский район</TextBlock>
+            <TextBlock>Городской округ город Кострома</TextBlock>
+            <TextBlock>Городской округ город Буй</TextBlock>
+            <TextBlock>Городской округ город Волгореченск</TextBlock>
+            <TextBlock>Городской округ город Галич</TextBlock>
+            <TextBlock>Городской округ город Мантурово</TextBlock>
+            <TextBlock>Городской округ город Шарья</TextBlock>
+            <TextBlock>Городской округ город Галич</TextBlock>
         </ComboBox>
 
         <ComboBox x:Name="subject_list" Margin="0 2 4 0" Grid.Column="1" Grid.Row="7"  SelectionChanged="placeLive_SelectionChanged">
@@ -173,6 +198,44 @@
             <TextBlock>Кемеровская область</TextBlock>
             <TextBlock>Кировская область</TextBlock>
             <TextBlock>Костромская область</TextBlock>
+            <TextBlock>Курганская область</TextBlock>
+            <TextBlock>Курская область</TextBlock>
+            <TextBlock>Ленинградская область</TextBlock>
+            <TextBlock>Липецкая область</TextBlock>
+            <TextBlock>Магаданская область</TextBlock>
+            <TextBlock>Московская область</TextBlock>
+            <TextBlock>Мурманская область</TextBlock>
+            <TextBlock>Нижегородская область</TextBlock>
+            <TextBlock>Новогородская область</TextBlock>
+            <TextBlock>Новосибирская область</TextBlock>
+            <TextBlock>Омская область</TextBlock>
+            <TextBlock>Оренбурская область</TextBlock>
+            <TextBlock>Орловская область</TextBlock>
+            <TextBlock>Пензенская область</TextBlock>
+            <TextBlock>Псковская область</TextBlock>
+            <TextBlock>Ростовская область</TextBlock>
+            <TextBlock>Рязанская область</TextBlock>
+            <TextBlock>Самарская область</TextBlock>
+            <TextBlock>Саратовская область</TextBlock>
+            <TextBlock>Сахалинская область</TextBlock>
+            <TextBlock>Свердловская область</TextBlock>
+            <TextBlock>Смоленская область</TextBlock>
+            <TextBlock>Тамбовская область</TextBlock>
+            <TextBlock>Тверская область</TextBlock>
+            <TextBlock>Томская область</TextBlock>
+            <TextBlock>Тульская область</TextBlock>
+            <TextBlock>Тюменская область</TextBlock>
+            <TextBlock>Ульяновская область</TextBlock>
+            <TextBlock>Челябинская область</TextBlock>
+            <TextBlock>Ярославская область</TextBlock>
+            <TextBlock>Москва</TextBlock>
+            <TextBlock>Санкт-Петербург</TextBlock>
+            <TextBlock>Севастополь</TextBlock>
+            <TextBlock>Европейская автономная облость</TextBlock>
+            <TextBlock>Ненецкий автономный округ</TextBlock>
+            <TextBlock>Ханты-Мансийский автономный округ - Югра</TextBlock>
+            <TextBlock>Чукотский автономный округ</TextBlock>
+            <TextBlock>Ямало-Ненецкий автономный округ</TextBlock>
         </ComboBox>
    
     </Grid>

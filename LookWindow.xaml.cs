@@ -22,6 +22,12 @@ namespace YP04
             InitializeComponent();
             Abiturient = abiturient;
             DataContext = Abiturient;
+            DateTime date = DateTime.Parse(Abiturient.DateBirthday);
+            DateTime age = DateTime.Now;
+            int tmp = age.Year - date.Year;
+            if (date > age.AddYears(0 - tmp))
+                tmp--;
+            ages.Text = tmp.ToString();
         }
     }
 }

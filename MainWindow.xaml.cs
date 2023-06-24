@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.EntityFrameworkCore;
@@ -78,6 +79,7 @@ namespace YP04
                 PlaceLive = abiturient.PlaceLive,
                 FinishSchool = abiturient.FinishSchool,
                 AttestatRating = abiturient.AttestatRating,
+                InvalidScan = abiturient.InvalidScan,
                 Snils = abiturient.Snils,
                 Budget = abiturient.Budget,
                 YearEntry = abiturient.YearEntry
@@ -100,6 +102,7 @@ namespace YP04
                     abiturient.AttestatRating = AbiturientWindow.Abiturient.AttestatRating;
                     abiturient.Snils = AbiturientWindow.Abiturient.Snils;
                     abiturient.Budget = AbiturientWindow.Abiturient.Budget;
+                    abiturient.InvalidScan = AbiturientWindow.Abiturient.InvalidScan;
                     abiturient.YearEntry = AbiturientWindow.Abiturient.YearEntry;
                     db.SaveChanges();
                     ablist.Items.Refresh();
@@ -112,6 +115,13 @@ namespace YP04
             if(abiturient is null) return;
             db.Abiturients.Remove(abiturient);
             db.SaveChanges();
+        }
+
+        private void CreateExcelfile(object sender, RoutedEventArgs e)
+        {
+            ObservableCollection<Abiturient> abiturients = db.Abiturients.Local.ToObservableCollection();
+            ExcelExport.CreateExcelfile(abiturients);
+
         }
     }
 }

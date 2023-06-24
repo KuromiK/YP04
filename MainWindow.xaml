@@ -35,7 +35,8 @@
             <Button Content="Добавить" Height="50" Width="80" Margin="10" Click="Add_click"/>
             <Button Content="Изменить" Height="50" Width="80" Margin="0 10" Click="Edit_click"/>
             <Button Content="Удалить" Height="50" Width="80" Margin="10" Click="Delete_click"/>
-            <Button Content="Просмотреть" Height="50" Width="80" Margin="0 10" Click="Look_click"/>
+            <Button Content="Просмотреть" Height="50" Width="80" Margin="0 0 10 0" Click="Look_click"/>
+            <Button Content="Excel" Height="50" Width="80" Margin="0 10" Click="CreateExcelfile"/>
         </StackPanel>
     </Grid>
 </Window>

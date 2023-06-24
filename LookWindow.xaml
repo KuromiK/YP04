@@ -56,7 +56,7 @@
         <TextBlock Text="{Binding Patronymic}" FontWeight="Bold" FontSize="20" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
         <TextBlock Text="{Binding Gender}" Grid.Column="1" FontSize="20" Grid.Row="3" VerticalAlignment="Center"/>
         <TextBlock Text="{Binding DateBirthday}" Grid.Column="1" FontSize="20" Grid.Row="4" VerticalAlignment="Center"/>
-        <TextBlock Text="{Binding Age}" Grid.Column="1" Grid.Row="5" FontSize="20" VerticalAlignment="Center"/>
+        <TextBlock Text="" Grid.Column="1" Grid.Row="5" FontSize="20" VerticalAlignment="Center" x:Name="ages"/>
         <TextBlock Text="{Binding Nationality}" Grid.Column="1" Grid.Row="6" FontSize="20" VerticalAlignment="Center"/>
         <TextBlock Text="{Binding PlaceLive}" Grid.Column="1" Grid.Row="7" FontSize="20" VerticalAlignment="Center"/>
         <TextBlock Text="{Binding Budget}" Grid.Column="1" Grid.Row="15" FontSize="20" VerticalAlignment="Center"/>
